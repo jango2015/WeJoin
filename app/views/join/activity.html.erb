@@ -1,0 +1,9 @@
+<h1>Join#activity</h1>
+<% Join.all.each do |join| %>
+    <p><%=join.id %></p>
+    <p><%=join.title %></p>
+    <p><%=join.latitude %></p>
+    <p><%=join.longitude %></p>
+    <p><%=join.timestamp %></p>
+<% end %>
+<p>Find me in app/views/join/activity.html.erb</p>
