@@ -5,6 +5,19 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <script language="javascript" src="http://webapi.amap.com/maps?v=1.2&key=dacc05a912ef938bd56c503bb7affb66"></script>
+  <script language="javascript">
+        var obj;
+        function mapInit(){
+            obj = new AMap.Map("map",{
+                center:new AMap.LngLat(<%=@join.longitude%>,<%=@join.latitude%>),
+                level:17
+            });
+
+            var buildings = new AMap.Buildings();
+            buildings.setMap(obj);
+        }
+  </script>
 </head>
 <body>
 

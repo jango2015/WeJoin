@@ -1,9 +1,10 @@
+<body onload="mapInit();">
 <h1>Join#activity</h1>
-<% Join.all.each do |join| %>
-    <p><%=join.id %></p>
-    <p><%=join.title %></p>
-    <p><%=join.latitude %></p>
-    <p><%=join.longitude %></p>
-    <p><%=join.timestamp %></p>
-<% end %>
+<p><%=@join.id %></p>
+<p><%=@join.title %></p>
+<p><%=@join.latitude %></p>
+<p><%=@join.longitude %></p>
+<p><%=@join.timestamp %></p>
+<div id="map" style="width:659px;height:400px;resize:both;"></div>
 <p>Find me in app/views/join/activity.html.erb</p>
+</body>
