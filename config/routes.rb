@@ -1,5 +1,5 @@
 Wejoin::Application.routes.draw do
-  get "welcome/index"
+  get 'welcome/index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,7 +8,7 @@ Wejoin::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get "join/activity/:id" => 'join#activity'
+  get 'activity/:id' => 'activity#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
