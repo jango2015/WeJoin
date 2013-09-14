@@ -11,19 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130907034529) do
+ActiveRecord::Schema.define(version: 20130914075317) do
 
-  create_table "joins", force: true do |t|
-    t.string   "jid"
+  create_table "activities", force: true do |t|
     t.string   "title"
     t.text     "desc"
-    t.datetime "timestamp"
+    t.datetime "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activities_locations", id: false, force: true do |t|
+    t.integer "activity_id", null: false
+    t.integer "location_id", null: false
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "title"
+    t.text     "desc"
     t.float    "latitude"
     t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "joins", ["jid"], name: "index_joins_on_jid", using: :btree
 
 end
