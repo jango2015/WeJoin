@@ -6,3 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Join.create([{title:'test',longitude: 121.498586, latitude: 31.239637}])
+User.create([{name:'Du',password:'wejoin'}])
