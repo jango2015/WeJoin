@@ -8,7 +8,7 @@ Wejoin::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get 'activity/:id' => 'activity#view'
+  resources :activities
   resources :users
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
