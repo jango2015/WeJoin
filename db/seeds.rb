@@ -10,3 +10,4 @@
   Activity.create(title: "Activity ##{i}")
 end
 Activity.find(1).location_ids = [1,2,3]
+User.create([{name:'Du',password:'wejoin'}])
