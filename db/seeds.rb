@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 5.times do |i|
-  Location.create(title: "Location ##{i}", latitude: 31.239637+i ,longitude: 121.498586+i)
+  Location.create(title: "Location ##{i}", latitude: 31.239637+i, longitude: 121.498586+i)
   Activity.create(title: "Activity ##{i}")
 end
-Activity.find(1).location_ids = [1,2,3]
-User.create([{name:'Du',password:'wejoin'}])
+Activity.find(1).location_ids = [1, 2, 3]
+User.create([{name: 'Du', email: 'du@gmail.com', password: 'wejoin'}])
