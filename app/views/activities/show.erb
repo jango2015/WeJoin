@@ -11,7 +11,9 @@
     }
 </script>
 <body>
-<h1>Join#activity</h1>
+<p><%=@activity.id %></p>
+<p><%=@activity.title %></p>
+<p><%=@activity.desc %></p>
 <%@activity.locations.each { |loc|  %>
     <p><%=loc.id %></p>
     <p><%=loc.title %></p>
@@ -20,5 +22,4 @@
     <div id="map<%=loc.id%>" style="width:659px;height:400px;resize:both;"></div>
     <script>mapInit(<%=loc.longitude%>,<%=loc.latitude%>,<%=loc.id%>);</script>
 <%} %>
-<p>Find me in app/views/join/activity.html.erb</p>
 </body>
