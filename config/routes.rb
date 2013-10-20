@@ -8,7 +8,7 @@ Wejoin::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  resources :activities
+  resources :activities ,defaults: {format: :json}
   resources :users
   post 'sign_up' => 'users#create'
 
