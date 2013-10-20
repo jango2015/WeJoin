@@ -4,9 +4,6 @@ class ActivitiesController < ApplicationController
     render :json => @activity
   end
 
-  def new
-  end
-
   def create
     @activity = params[:activity]
     @activity = Activity.create(title: @activity[:title],desc: @activity[:desc])

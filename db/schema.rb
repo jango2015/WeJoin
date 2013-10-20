@@ -26,19 +26,6 @@ ActiveRecord::Schema.define(version: 20131007102131) do
     t.integer "location_id", null: false
   end
 
-  create_table "joins", force: true do |t|
-    t.string   "jid"
-    t.string   "title"
-    t.text     "desc"
-    t.datetime "timestamp"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "joins", ["jid"], name: "index_joins_on_jid", using: :btree
-
   create_table "locations", force: true do |t|
     t.string   "title"
     t.text     "desc"

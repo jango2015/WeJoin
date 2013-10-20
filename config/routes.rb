@@ -1,4 +1,6 @@
 Wejoin::Application.routes.draw do
+  resources :locations
+
   get 'welcome/index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -9,6 +11,7 @@ Wejoin::Application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   resources :activities ,defaults: {format: :json}
+  resources :locations ,defaults: {format: :json}
   resources :users
   post 'sign_up' => 'users#create'
 
