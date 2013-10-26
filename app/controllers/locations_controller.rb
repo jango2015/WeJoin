@@ -1,5 +1,4 @@
 class LocationsController < ApplicationController
-  protect_from_forgery :except => :create
   def show
     @location = Location.find params[:id]
     render :json => @location
@@ -15,7 +14,7 @@ class LocationsController < ApplicationController
     locations = []
     my_location = params[:my_location]
     Location.all.each do |location|
-      if get_distance_hav(location.latitude, location.longitude, 1, 1) <= 10
+      if get_distance_hav(location.latitude, location.longitude, 32, 124) <= 100000
       #if get_distance_hav(location.latitude, location.longitude, my_location[:latitude], my_location[:longitude]) >= 0
         locations << location
       end
