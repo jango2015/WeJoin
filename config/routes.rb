@@ -12,6 +12,7 @@ Wejoin::Application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   resources :activities ,defaults: {format: :json}
   resources :locations ,defaults: {format: :json}
+  post 'near' => 'locations#near'
   resources :users
   post 'sign_up' => 'users#create'
 
