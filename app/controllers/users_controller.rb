@@ -4,14 +4,10 @@ class UsersController < ApplicationController
 
   def create
     if User.find_by_email(params[:email])
-      respond_to do |format|
-        format.json { render json: {status: 'error'}.to_json }
-      end
+      render json: {status: 'error'}
     else
-      #User.new(name: user_data["name"], email: user_data["email"], password: user_data["password"]).save
-      respond_to do |format|
-        format.json { render json: {status: 'success'}.to_json, status: '200' }
-      end
+      User.new(name: params[:name], email: params[:email], password: params[:password]).save
+      render json: {status: 'success'}
     end
   end
 end

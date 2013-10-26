@@ -10,11 +10,10 @@ Wejoin::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  resources :activities ,defaults: {format: :json}
-  resources :locations ,defaults: {format: :json}
+  resources :activities, defaults: {format: :json}
+  resources :locations, defaults: {format: :json}
   post 'near' => 'locations#near'
-  resources :users
-  post 'sign_up' => 'users#create'
+  post 'sign_up', to: 'users#create', defaults: {format: :json}
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -47,7 +46,7 @@ Wejoin::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
