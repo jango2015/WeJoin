@@ -4,4 +4,3 @@ rvm:
 before_script:
   - echo -e "Host 121.199.10.110\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 script: ./script/ci/print_key.sh
-script: "bundle exec rake deploy"
