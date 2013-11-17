@@ -1,4 +1,5 @@
-PID= $(ps aux | grep \"rails server\")
+##PID=$(ps aux | grep "rails server")
+PID=$(pgrep "rails server")
 kill -9 $PID
 git pull origin master
 bundle install
