@@ -1,6 +1,9 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
 before_script:
-  - echo -e "Host 121.199.10.110\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- echo -e "Host 121.199.10.110\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 script: ./auto-deploy.sh
+env:
+  global:
+    secure: ZTtnN1K1G9iYXUf+bstXGgcq2Z0YaD1xJg2VNYLBHs6p8Kd6a8Lp8Fzoipby+eBjolo1tS6Um5zAmEW1+tZKMnoW1UcC4e1CxLhdAxQpdcAwimhxqrPZY86jzdY7mfLkqa5ZmY/S1KnyEE02MvfC0T7DKfSXQglTJCQDfAuccr4=

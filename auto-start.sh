@@ -1,6 +1,5 @@
 ##PID=$(ps aux | grep "rails server")
-PID=$(pgrep "rails server")
-kill -9 $PID
+kill -9 $(pgrep -f "rails server")
 git pull origin master
 bundle install
 rake db:drop
